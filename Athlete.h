@@ -2,17 +2,16 @@
 #define ATHLETE_H
 
 #include <string>
+#include "Person.h"
 
-class Athlete {
+class Athlete : public Person{
 private:
-    std::string name;
-    int age;
+  
     std::string sport;
 
 public:
     Athlete(std::string name, int age, std::string sport);
     std::string playSport();
-    std::string introduce();
 };
 
 #endif

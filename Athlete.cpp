@@ -1,19 +1,12 @@
 #include "Athlete.h"
 #include <string>
 
-Athlete::Athlete(std::string name, int age, std::string sport) {
-    this->name = name;
-    this->age = age;
+Athlete::Athlete(std::string name, int age, std::string sport)
+        :Person(name, age) {
     this->sport = sport;
 }
 
 std::string Athlete::playSport() {
-    return name + " is playing " + sport + ".";
+    return getName() + " is playing " + sport + ".";
 }
 
-std::string Athlete::introduce() {
-    std::string message = "My name is " + name + ". ";
-    message += "I'm " + std::to_string(age) + " years old.\n";
-    message += playSport();
-    return message;
-}

@@ -3,17 +3,20 @@ CFLAGS = -g -std=c++11
 
 all: run
 
+person.o:
+	$(CC) $(CFLAGS) -c Person.cpp
+
 artist.o:
-	$(CC) $(CFLAGS) -c artist.cpp
+	$(CC) $(CFLAGS) -c Artist.cpp
 
 athlete.o:
-	$(CC) $(CFLAGS) -c athlete.cpp
+	$(CC) $(CFLAGS) -c Athlete.cpp
 
 main.o: 
 	$(CC) $(CFLAGS) -c main.cpp
 
-compile: main.o artist.o athlete.o
-	$(CC) $(CFLAGS) -o main.out main.o artist.o athlete.o
+compile: main.o artist.o athlete.o person.o
+	$(CC) $(CFLAGS) -o main.out main.o artist.o athlete.o person.o
 
 run: compile
 	./main.out
