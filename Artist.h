@@ -12,6 +12,7 @@ private:
 public:
     Artist(std::string name, int age, std::string genre);
     std::string playMusic(); //ประกาศheader
+    std::string introduce();
     
 };
 
