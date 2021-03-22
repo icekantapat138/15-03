@@ -12,6 +12,7 @@ private:
 public:
     Athlete(std::string name, int age, std::string sport);
     std::string playSport();
+    std::string introduce();
 };
 
 #endif
